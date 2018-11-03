@@ -18,7 +18,7 @@ This repository contains code to reproduce the results of [our arXiv paper](http
 ## Reproduce our results
 
 #### Download the data:
-Download [US8K dataset](https://urbansounddataset.weebly.com/urbansound8k.html), and ASC-TUT dataset ([dev-set](https://zenodo.org/record/400515#.W9n2UtGdZhE)/[eval-set](https://zenodo.org/record/1040168#.W9n2jNGdZhE)).
+Download [US8K dataset](https://urbansounddataset.weebly.com/urbansound8k.html), and ASC-TUT dataset ([dev-set](https://zenodo.org/record/400515#.W9n2UtGdZhE) / [eval-set](https://zenodo.org/record/1040168#.W9n2jNGdZhE)).
 
 #### Install dependencies:
 Create a python 3 virtual environment and install dependencies: `pip install -r requirements.txt`
