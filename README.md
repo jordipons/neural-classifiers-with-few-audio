@@ -39,7 +39,7 @@ _*Warning!*_ Rename `index_0.tsv` to `index.tsv`. This is because this script is
 
 Set `config_proto` dictionary in `config_file.py`, and run `CUDA_VISIBLE_DEVICES=0 python proto.py spec`
 
-#### Regularized deep learning models results:
+#### Regularized deep learning results:
 
 Set `config_sl` dictionary in `config_file.py`, and run `CUDA_VISIBLE_DEVICES=0 python sl_train.py spec`
 
