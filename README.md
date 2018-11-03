@@ -31,7 +31,7 @@ To preprocess the data, first set some `config_file.py` variables:
 
 Preprocess the data running `python preprocess.py asc_spec`. Note `asc_spec` config option is defined in `config_file.py`
 
-After running `preprocess.py`, spectrograms are in: `../DATA_FOLDER/audio_representation/asc__time-freq/`
+After running `preprocess.py`, spectrograms are in `../DATA_FOLDER/audio_representation/asc__time-freq/`
 
 _*Warning!*_ Rename `index_0.tsv` to `index.tsv`. This is because this script is parallelizable.
 
