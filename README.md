@@ -43,7 +43,7 @@ Set `config_proto` dictionary in `config_file.py`, and run `CUDA_VISIBLE_DEVICES
 
 Set `config_sl` dictionary in `config_file.py`, and run `CUDA_VISIBLE_DEVICES=0 python sl_train.py spec`
 
-Once training is done, the resulting model is stored in: `../DATA_FOLDER/experiments/fold_0_1541174334/`
+Once training is done, the resulting model is stored in `../DATA_FOLDER/experiments/fold_0_1541174334/`
 
 To evaluate the model, run: `CUDA_VISIBLE_DEVICES=0 python sl_evaluate.py fold_0_1541174334`
 
