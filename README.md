@@ -2,7 +2,7 @@
 
 We investigate supervised learning strategies that improve the training of neural network audio classifiers on small annotated collections. In particular, we study whether (i) a naive regularization of the solution space, (ii) prototypical networks, (iii) transfer learning, or (iv) their combination, can foster deep learning models to better leverage a small amount of training examples. To this end, we evaluate (i-iv) for the tasks of acoustic event recognition and acoustic scene classification, considering from 1 to 100 labeled examples per class. Results indicate that transfer learning is a powerful strategy in such scenarios, but prototypical networks show promising results when one does not count with external or validation data. 
 
-This repository contains code to reproduce the results of [our arXiv paper](https://arxiv.org/abs/1810.10274).
+This repository contains code to reproduce the results of our [arXiv paper](https://arxiv.org/abs/1810.10274).
 
 #### Reference:
 ```
@@ -21,7 +21,7 @@ This repository contains code to reproduce the results of [our arXiv paper](http
 Download [US8K dataset](https://urbansounddataset.weebly.com/urbansound8k.html), and ASC-TUT dataset ([dev-set](https://zenodo.org/record/400515#.W9n2UtGdZhE) / [eval-set](https://zenodo.org/record/1040168#.W9n2jNGdZhE)).
 
 #### Install dependencies:
-Create a python 3 virtual environment and install dependencies: `pip install -r requirements.txt`
+Create a python 3 virtual environment and install dependencies `pip install -r requirements.txt`, and install tensorflow `pip install tensorflow` (for CPU-only) or `pip install tensorflow-gpu`(for CUDA-enabled GPU cards).
 
 #### Preprocess the data:
 To preprocess the data, first set some `config_file.py` variables:
@@ -34,10 +34,6 @@ After running `preprocess.py`, spectrograms are in `../DATA_FOLDER/audio_represe
 
 _*Warning!*_ Rename `index_0.tsv` to `index.tsv`. This is because this script is parallelizable.
 
-#### Prototypical networks results:
-
-Set `config_proto` dictionary in `config_file.py`, and run `CUDA_VISIBLE_DEVICES=0 python proto.py spec`
-
 #### Regularized deep learning results:
 
 Set `config_sl` dictionary in `config_file.py`, and run `CUDA_VISIBLE_DEVICES=0 python sl_train.py spec`
@@ -45,6 +41,10 @@ Set `config_sl` dictionary in `config_file.py`, and run `CUDA_VISIBLE_DEVICES=0 
 Once training is done, the resulting model is stored in `../DATA_FOLDER/experiments/fold_0_1541174334/`
 
 To evaluate the model, run: `CUDA_VISIBLE_DEVICES=0 python sl_evaluate.py fold_0_1541174334`
+
+#### Prototypical networks results:
+
+Set `config_proto` dictionary in `config_file.py`, and run `CUDA_VISIBLE_DEVICES=0 python proto.py spec`
 
 #### Transfer learning results:
 We also study the effectiveness of transfer learning. For that, we use a VGG model pre-trained with Audioset, a dataset conformed by 2 M YouTube audios. This model is available [online](https://github.com/tensorflow/models/tree/master/research/audioset).
@@ -61,7 +61,7 @@ And you can also run `transfer_train.py` and `transfer_evaluate.py` following th
 - `config_file.py`: file with all configurable parameters.
 - `preprocess.py`: pre-computes and stores the spectrograms.
 
-Scripts for standard and regularized **deep learning models** experiments:
+Scripts for **regularized deep learning models** experiments:
 - `sl_train.py`: run it to train your model. First set `config_sl` in `config_file.py`
 - `sl_evaluate.py`: run it to evaluate the previously trained model.
 - `models_sl.py`: script where the architectures are defined.
