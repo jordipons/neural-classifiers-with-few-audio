@@ -21,7 +21,8 @@ This repository contains code to reproduce the results of our [arXiv paper](http
 Download [US8K dataset](https://urbansounddataset.weebly.com/urbansound8k.html), and ASC-TUT dataset ([dev-set](https://zenodo.org/record/400515#.W9n2UtGdZhE) / [eval-set](https://zenodo.org/record/1040168#.W9n2jNGdZhE)).
 
 #### Install dependencies:
-Create a python 3 virtual environment and install dependencies `pip install -r requirements.txt`, and install tensorflow `pip install tensorflow` (for CPU-only) or `pip install tensorflow-gpu`(for CUDA-enabled GPU cards).
+Create a python 3 virtual environment and install dependencies `pip install -r requirements.txt`
+Install tensorflow for CPU-only `pip install tensorflow` or for CUDA-enabled GPU cards `pip install tensorflow-gpu`().
 
 #### Preprocess the data:
 To preprocess the data, first set some `config_file.py` variables:
@@ -40,7 +41,7 @@ Set `config_sl` dictionary in `config_file.py`, and run `CUDA_VISIBLE_DEVICES=0 
 
 Once training is done, the resulting model is stored in `../DATA_FOLDER/experiments/fold_0_1541174334/`
 
-To evaluate the model, run: `CUDA_VISIBLE_DEVICES=0 python sl_evaluate.py fold_0_1541174334`
+To evaluate the model, run `CUDA_VISIBLE_DEVICES=0 python sl_evaluate.py fold_0_1541174334`
 
 #### Prototypical networks results:
 
