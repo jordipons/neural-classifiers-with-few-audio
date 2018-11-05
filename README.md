@@ -23,7 +23,7 @@ Download [US8K dataset](https://urbansounddataset.weebly.com/urbansound8k.html),
 #### Installation:
 Create a python 3 virtual environment and install dependencies `pip install -r requirements.txt`
 
-Install tensorflow for CPU-only `pip install tensorflow` or for CUDA-enabled GPU cards `pip install tensorflow-gpu`().
+Install tensorflow for CPU `pip install tensorflow` or for CUDA-enabled GPU `pip install tensorflow-gpu`
 
 #### Preprocess the data:
 To preprocess the data, first set some `config_file.py` variables:
