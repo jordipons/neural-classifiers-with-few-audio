@@ -25,6 +25,8 @@ Create a python 3 virtual environment and install dependencies `pip install -r r
 
 Install tensorflow for CPU `pip install tensorflow` or for CUDA-enabled GPU `pip install tensorflow-gpu`
 
+Be sure to have `ffmpeg` installed, as well.
+
 #### Preprocess the data:
 To preprocess the data, first set some `config_file.py` variables:
 - `DATA_FOLDER`, where you want to store all your intermediate files (see folders structure below).
